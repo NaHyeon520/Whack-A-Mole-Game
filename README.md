@@ -1,35 +1,30 @@
-# Arduino_gameProject
-2학년 1학기 컴퓨터기초실험 텀프로젝트-두더지잡기게임
+# Whack-A-Mole Game
 
-두더지 잡기 게임
+Microcontroller: Arduino Mega 2560
+Main Components: LED, DC Motor, Infrared Obstacle Avoidance Sensor, Text LCD, Buzzer
 
-<배경 및 필요성>
-
-게임 시장이 급진적으로 커져감에 따라, 단순히 키보드 마우스를 이용한 방식을 넘어 사용자와 물리적으로 소통하는 게임들이 증가하고 있다.
-
-
-<기존 시스템과 서비스의 한계>
-
-기존의 게임들은 결과에 대해 단순한 응답을 하여 쉽게 지겨워지는 한계가 있다. 또한 사람과 적극적으로 상호작용하는 경우가 드물다.
-
-
-<제안하는 시스템의 목표와 특성>
-
-사용자와의 적극적인 상호작용과 동적인 반응을 대표적인 특성으로 내세우고자 한다. 부저와 텍스트 LCD로 사용자와 상호작용하고, 생명을 모두 소진했을 경우 게임기의 바퀴가 가동되어 도망친다.
+<ul>
+           <li>LED: Mole. If the light is on, it means that the mole has come out.</li>
+           <li>DC Motor: When the user loses all of their life count, it will roll the wheel and run away from the user.</li>
+           <li>Infrared Obstacle Avoidance Sensor: This recognizes whether the user has hit the mole or not. The user should hit this sensor while the LED is on.</li>
+           <li>Text LCD: It informs the user of the start of the game, left life counts, end message, and total score.</li>
+           <li>Buzzer: It makes different sounds when the user hits the mole or not. When the game ends, it plays the music. </li>
+</ul>
 
 
-<제안하는 시스템의 내용 및 구현 방법>
-LED 8개로 두더지가 튀어나오는 것을 발광으로 표현한다. 불이 켜져있을 때 시간 내로 두더지를 잡지 못했을 때 부저가 1회 울린다. 5회 이상 오답 시 음악을 통해 종료를 알린다.
-텍스트 LCD로 게임이 시작되었을 때 "HELLO"를 출력하고, 게임 종료 후 WIN/LOSE를 출력한다. 
-DC 모터로 바퀴를 만들어 5회 이상 잡지 못했을 때 작동한다. 적외선 장애물 회피 센서로 두더지를 잡은 것을 인식한다.
+![hello](https://github.com/NaHyeon520/Whack-A-Mole-Game/assets/62274608/5c52041c-421c-4d81-a492-74f4e8c981e8)
 
-<사용한 부품>
-아두이노 ATMEGA,
-브레드보드,
-부저,
-점퍼케이블,
-LED,
-DC모터+바퀴,
-적외선 장애물 회피 센서,
-텍스트 LCD,
-배터리소켓,
+When the user turns on the game, "Hello" appears on the text LCD.
+
+![game](https://github.com/NaHyeon520/Whack-A-Mole-Game/assets/62274608/73084ffb-4286-4f62-bb3e-719ab7da836b)
+
+The game starts when the user pushes the start button on the breadboard. Text LCD will show the left life count.
+
+![mole](https://github.com/NaHyeon520/Whack-A-Mole-Game/assets/62274608/54d3ce5e-4b67-4c05-83c8-541add8252ff)
+
+When the LED is on, it means the mole has come out. Eight LEDs in the middle of the board are moles, and the surrounding sensor is the Infrared Obstacle Avoidance Sensor. The user should touch this sensor to hit the mole in time. 
+
+![end](https://github.com/NaHyeon520/Whack-A-Mole-Game/assets/62274608/90ec70c6-9b9b-4a70-a396-325310df5ea9)
+
+If the user loses all of their life count, the game ends. Buzzer plays the music and the DC Motor works, running away from the user:) 
+Good Luck!
