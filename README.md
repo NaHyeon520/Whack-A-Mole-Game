@@ -1,6 +1,6 @@
 # Whack-A-Mole Game
 
-Microcontroller: Arduino Mega 2560
+Microcontroller: Arduino Mega 2560 <br>
 Main Components: LED, DC Motor, Infrared Obstacle Avoidance Sensor, Text LCD, Buzzer
 
 <ul>
